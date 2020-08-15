@@ -1,0 +1,114 @@
+<div class="screen-container">
+  <form class="screen-form">
+    <span class="screen-title">Configura tu perfil</span>
+    <span class="screen-subtitle">
+      Es lo mínimo que necesitamos para proporcionarte una buena experiencia en
+      nuestra plataforma
+    </span>
+    <span class="user-label">Nombre de usuario</span>
+    <input class="user-input" type="text" />
+    <div class="screen-content-box">
+      <div class="screen-scroll">
+        <div class="screen-image-cont">
+          <img
+            [src]="fileSelected || defaultImage"
+            alt="default"
+            class="screen-image"
+          />
+        </div>
+        <input
+          style="display: none;"
+          #fileInput
+          type="file"
+          (change)="fileChangeEvent($event)"
+        />
+        <span
+          class="screen-text"
+          style="margin-bottom: 30px;"
+          (click)="fileInput.click()"
+        >
+          Agrega tu imagen
+        </span>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Genero</mat-label>
+          <mat-select>
+             <mat-option *ngFor="let genero of gender" [value]="genero">
+              {{ genero }}
+            </mat-option>
+          </mat-select>
+          <mat-icon class="screen-icon-grey" matPrefix>
+            reply
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker" autocomplete="off" />
+          <mat-datepicker-toggle
+            matPrefix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Whatsapp</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            phone
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            alternate_email
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Domicilio</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            place
+          </mat-icon>
+        </mat-form-field>
+        <span class="screen-text">Agrega tu perfil</span>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Facebook</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            thumb_up_alt
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Instagram</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            thumb_up_alt
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Twitter</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            thumb_up_alt
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Linkedin</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            thumb_up_alt
+          </mat-icon>
+        </mat-form-field>
+        <button mat-raised-button class="screen-save-button" routerLink="/ingreso">
+          Guardar
+        </button>
+        <span class="screen-end-text">
+          Te enviaremos un correo confirmando que tu cuenta fue activada.Si aún
+          no lo haz recibido haz click en seguida.
+        </span>
+        <a class="screen-link">Reenviar correo</a>
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,69 @@
+<div class="screen-container">
+  <div class="screen-content">
+    <div class="screen-header">
+      <div class="screen-header-img-banner">
+        <img
+          class="screen-header-img-header"
+          src="../../../assets/images/fitness-wallpaper-hd-wallpaper-b5213908a95c17824941ac1445502869-big-157279.jpg"
+        />
+      </div>
+      <div class="screen-header-img-cont">
+        <div class="screen-circle-1">
+          <img class="screen-card-image" [src]="fileSelected || defaultImage" />
+        </div>
+      </div>
+    </div>
+    <div class="screen-content-box">
+      <div class="screen-scroll">
+        <div class="screen-form">
+          <div class="screen-hello">
+            Hola!
+          </div>
+          <mat-form-field color="accent" class="screen-form-field">
+            <mat-label>Nombre de usuario</mat-label>
+            <input matInput autocomplete="off" color="accent" />
+          </mat-form-field>
+          <mat-form-field color="accent" class="screen-form-field">
+            <mat-label>Contraseña</mat-label>
+            <input
+              matInput
+              [type]="hide ? 'text' : 'password'"
+              autocomplete="off"
+            />
+            <button
+              mat-icon-button
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Ver Contraseña'"
+              [attr.aria-pressed]="hide"
+            >
+              <mat-icon class="screen-icon-eye">
+                {{ hide ? 'visibility_off' : 'visibility' }}
+              </mat-icon>
+            </button>
+          </mat-form-field>
+          <div class="screen-text-info">
+            Olvidé mi contraseña
+          </div>
+          <div>
+            <button mat-raised-button class="screen-work-button" routerLink="/ingreso">
+              ENTRAR
+            </button>
+          </div>
+          <div class="screen-text-info">
+            <p>
+              <span>Aún no cuentas con una cuenta?</span>
+              <br />
+              <a class="screen-here-click" routerLink="/crear-cuenta">Presione aquí</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="screen-footer">
+    <div class="screen-footer-1">
+      <mat-icon class="screen-icon-white">more_horiz</mat-icon>
+    </div>
+  </div>
+</div>

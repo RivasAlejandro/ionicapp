@@ -1,0 +1,256 @@
+.screen-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 16px;
+}
+/* Header */
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 36px;
+  margin-bottom: 24px;
+}
+.screen-active-route {
+  border-radius: 50px;
+  border: 2px solid #45d184;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen-route {
+  border-radius: 50%;
+  border: 2px solid #ccd2cc;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Subtitle */
+.screen-subtitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 36px;
+  margin-bottom: 24px;
+}
+.screen-subtitle-text {
+  color: #45d184;
+  font-weight: 600;
+  font-size: 22px;
+}
+/* Content */
+.screen-content {
+  flex: 1;
+  position: relative;
+}
+.screen-content-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.screen-scroll {
+  overflow-y: scroll;
+  height: 100%;
+  max-height: 100%;
+}
+.screen-card {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid #ccd2cc;
+  border-radius: 6px;
+  margin: 10px 30px;
+  padding: 8px;
+}
+.screen-card-column {
+  line-height: 16px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+}
+.screen-card-star {
+  margin-top: 12px;
+}
+.screen-card-image {
+  border-radius: 50%;
+  height: 68px;
+  width: 68px;
+}
+/* Footer */
+.screen-footer {
+  display: flex;
+  height: 42px;
+  position: relative;
+}
+.screen-footer-1 {
+  flex: 1;
+  height: 100%;
+  background-color: #167ba3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 50px;
+}
+.screen-footer-2 {
+  flex: 1;
+  height: 100%;
+  background-color: #053c61;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px;
+}
+.screen-footer-3 {
+  position: absolute;
+  height: 100%;
+  right: 38%;
+  left: 38%;
+  background-color: #045479;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.screen-icon-white {
+  color: white;
+}
+.screen-icon-green {
+  color: #45d184;
+}
+.screen-icon-grey {
+  color: #ccd2cc;
+}
+.screen-icon-blue {
+  color: #045479;
+}
+.screen-icon-black {
+  color: black;
+}
+
+.screen-dialog {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 0 40px;
+}
+.screen-dialog-close {
+  height: 26px;
+  width: 26px;
+  border-radius: 50%;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #ccd2cc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.screen-start-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 14px;
+}
+.screen-filter-button {
+  background-color: #45d184;
+  color: white;
+  width: 100px;
+  margin-top: 24px;
+}
+.filter-icon {
+  font-size: 60px;
+  margin: 40px 0;
+  margin-right: 40px;
+}
+.filter-title {
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 24px;
+}
+.filter-subtitle {
+  font-size: 12px;
+  display: flex;
+  border-top: 1px solid white;
+  width: 100%;
+  padding-top: 14px;
+  margin-top: 30px;
+  padding-left: 24px;
+}
+.filter-label {
+  width: 96%;
+  font-size: 12px;
+  font-weight: lighter;
+}
+.filter-input {
+  width: 96%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  height: 42px;
+  margin: 10px;
+  padding: 0 10px;
+}
+
+.mat-form-field-appearance-fill .mat-form-field-flex {
+  background: white;
+  color: black;
+}
+
+.screen-dialog2 {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.9);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 40px;
+  padding: 100px 40px 40px 40px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.screen-dialog-button {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.screen-reject-button {
+  background-color: #053c61;
+  color: white;
+}
+
+.screen-acept-button {
+  background-color: #45d184;
+  color: white;
+}
+
+.screen-date {
+  color: #45d184;
+  font-weight: 600;
+  font-size: 28px;
+  height: 20px;
+}

@@ -1,0 +1,64 @@
+<div class="screen-container">
+  <div class="screen-content">
+    <div class="screen-header">
+      <div class="screen-header-name-cont">
+        <span style="font-size: 20px;">Hola!</span>
+        <span>@javierramos</span>
+      </div>
+      <div class="screen-header-img-cont">
+        <div class="screen-circle-1">
+          <img class="screen-card-image" [src]="fileSelected || defaultImage" />
+        </div>
+        <input
+          style="display: none;"
+          #fileInput
+          type="file"
+          (change)="fileChangeEvent($event)"
+        />
+        <div class="screen-circle-2" (click)="fileInput.click()">
+          <mat-icon class="screen-icon-green">edit</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="screen-content-box">
+
+      <div class="screen-date-info">
+        <span>Aún no inicias</span>
+        <span>un trátamiento</span>
+      </div>
+      <div class="screen-card-column-simple-text">
+        <span>Te sugerimos primero
+              ponerte en contacto con uno
+              de nuestros profesionales
+              selecciona a el adecuado para
+              ti desde nuestro directorio</span>
+      </div>
+
+      <div class="screen-date-info-img-simple-text">
+        <img
+          class="screen-card-image"
+          src="../../../assets/images/ok.png"
+        />
+        <div>
+          <span>Puedes contactar a tantos</span><br>
+          <span>profesionales como quieras</span>
+        </div>
+      </div>
+      <div class="screen-circle-3">
+        <img class="screen-card-image-profesional" src="../../../assets/images/profesional.png" routerLink="/directorio"/>
+      </div>
+    </div>
+  </div>
+  <div class="screen-footer">
+    <div class="screen-footer-1">
+      <mat-icon class="screen-icon-white">more_horiz</mat-icon>
+    </div>
+    <div class="screen-footer-2">
+      <mat-icon class="screen-icon-white">favorite_border</mat-icon>
+    </div>
+    <div class="screen-footer-3">
+      <mat-icon class="screen-icon-green">view_module</mat-icon>
+    </div>
+  </div>
+</div>
+

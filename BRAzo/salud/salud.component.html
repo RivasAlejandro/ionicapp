@@ -1,0 +1,88 @@
+<div class="screen-container">
+  <div class="screen-content">
+    <div class="screen-header">
+      <div class="screen-header-avatar">
+        <div class="screen-circle-1">
+          <img class="screen-card-image" [src]="fileSelected || defaultImage" />
+        </div>
+        <input
+          style="display: none;"
+          #fileInput
+          type="file"
+          (change)="fileChangeEvent($event)"
+        />
+        <div class="screen-circle-2" (click)="fileInput.click()">
+          <mat-icon class="screen-icon-green">edit</mat-icon>
+        </div>
+      </div>
+      <div class="screen-header-name">
+        <div style="font-size: 26px;">Hola!</div>
+        <br />
+        <div>@javierramos</div>
+      </div>
+    </div>
+    <div class="screen-info">
+      <div class="screen-info-queries">
+        <div style="font-size: 10px;">
+          CONSULTA
+        </div>
+        <div style="font-size: 26px; font-weight: bold;">
+          05
+        </div>
+      </div>
+      <div>
+        <div class="screen-info-options">
+          <div
+            class="screen-info-options-box screen-info-options-space-right"
+            (click)="(null)"
+          >
+            <div>
+              <img
+                class="screen-info-fix-img"
+                src="../../../assets/icons/transparent2verde.png"
+                routerLink="/evaluacion-corporal"
+              />
+            </div>
+            Evolución corporal
+          </div>
+          <div
+            class="screen-info-options-box screen-info-options-space-left"
+            (click)="(null)"
+          >
+            <div>
+              <img
+                class="screen-info-img"
+                src="../../../assets/icons/transparent5verde.png"
+                routerLink="/plan-alimentacion"
+              />
+            </div>
+            Plan de alimentación
+          </div>
+        </div>
+        <div class="screen-info-options">
+          <div class="screen-info-options-box" (click)="(null)">
+            <div style="margin-bottom: 16px;">
+              <img
+                class="screen-info-img"
+                src="../../../assets/icons/transparent4verde.png"
+                routerLink="/plan-entrenamiento"
+              />
+            </div>
+            Plan de entrenamiento
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="screen-footer">
+    <div class="screen-footer-1">
+      <mat-icon class="screen-icon-white">more_horiz</mat-icon>
+    </div>
+    <div class="screen-footer-2">
+      <mat-icon class="screen-icon-white">favorite_border</mat-icon>
+    </div>
+    <div class="screen-footer-3">
+      <mat-icon class="screen-icon-green">view_module</mat-icon>
+    </div>
+  </div>
+</div>

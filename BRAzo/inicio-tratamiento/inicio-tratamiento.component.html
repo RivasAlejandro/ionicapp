@@ -1,0 +1,92 @@
+<div class="screen-container">
+  <div class="screen-content">
+    <div class="screen-header">
+      <div class="screen-header-name-cont">
+        <span style="font-size: 20px;">Hola!</span>
+        <span>@javierramos</span>
+      </div>
+      <div class="screen-header-img-cont">
+        <div class="screen-circle-1">
+          <img class="screen-card-image" [src]="fileSelected || defaultImage" />
+        </div>
+        <input
+          style="display: none;"
+          #fileInput
+          type="file"
+          (change)="fileChangeEvent($event)"
+        />
+        <div class="screen-circle-2" (click)="fileInput.click()">
+          <mat-icon class="screen-icon-green">edit</mat-icon>
+        </div>
+      </div>
+    </div>
+    <div class="screen-content-box">
+      <div class="screen-date-info" routerLink="/salud">
+        <div class="screen-date-info-header">
+          <span>INICIASTE TRATAMIENTO</span>
+        </div>
+        <span>10-04-2020</span>
+      </div>
+      <div class="screen-date-info" (click)="toggle2()">
+        <div class="screen-date-info-header">
+          <span>SIGUIENTE CITA</span>
+        </div>
+        <span>10-04-2020</span>
+      </div>
+      <div class="screen-divider"></div>
+      <div class="screen-card" *ngFor="let item of [1, 2]">
+        <div class="screen-card-column">
+          <span>Ahora en contacto con</span>
+          <span>@carloshernadez</span>
+          <div class="screen-card-star">
+            <app-start-rating></app-start-rating>
+          </div>
+        </div>
+        <img
+          class="screen-card-image"
+          src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="screen-footer">
+    <div class="screen-footer-1">
+      <mat-icon class="screen-icon-white">more_horiz</mat-icon>
+    </div>
+    <div class="screen-footer-2">
+      <mat-icon class="screen-icon-white">favorite_border</mat-icon>
+    </div>
+    <div class="screen-footer-3">
+      <mat-icon class="screen-icon-green">view_module</mat-icon>
+    </div>
+  </div>
+</div>
+
+
+<!-- calendar -->
+<div class="screen-dialog2" *ngIf="dialog2">
+  <div class="screen-dialog-close" (click)="toggle2()">
+    <mat-icon class="screen-icon-black">close</mat-icon>
+  </div>
+  <div>
+    <span class="screen-date">19-03-2020</span>
+    <br />
+    <span>Tu próxima consulta</span>
+  </div>
+  <form>
+    <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Estado</mat-label>
+      <input matInput [matDatepicker]="picker" autocomplete="off" />
+      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </form>
+  <div class="screen-dialog-button">
+    <button mat-raised-button class="screen-reject-button" (click)="toggle2()">
+      Rechazar
+    </button>
+    <button mat-raised-button class="screen-acept-button" (click)="toggle2()">
+      Acceptar
+    </button>
+  </div>
+</div>

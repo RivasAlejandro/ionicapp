@@ -1,0 +1,139 @@
+<div class="screen-container">
+  <div class="screen-header">
+    <div class="screen-route" routerLink="/directorio">
+      <mat-icon class="screen-icon-grey">contacts</mat-icon>
+    </div>
+    <div class="screen-active-route">
+      <mat-icon class="screen-icon-green">send</mat-icon>
+    </div>
+    <div class="screen-route" routerLink="/pago-mensual">
+      <mat-icon class="screen-icon-grey">description</mat-icon>
+    </div>
+  </div>
+  <div class="screen-subtitle">
+    <span class="screen-subtitle-text">Contacto wellogi</span>
+  </div>
+  <div class="screen-content">
+    <div class="screen-content-box">
+      <div class="screen-scroll">
+
+
+
+        <div fxflex="0 0 auto" fxlayout="column" class="chat-footer" style="flex: 0 0 auto; box-sizing: border-box; flex-direction: column; display: flex;">
+          <div fxflex="0 0 auto" fxlayout="row" fxlayoutalign="center center" class="reply-form" style="flex: 0 0 auto; box-sizing: border-box; flex-direction: row; display: flex; place-content: center; align-items: center;">
+            <form novalidate="" fxflex="" fxlayout="row" fxlayoutalign="start center" class="ng-pristine ng-valid ng-touched" style="flex: 1 1 0%; box-sizing: border-box; flex-direction: row; display: flex; place-content: center flex-start; align-items: center; margin-top: 350px;">
+              <mat-form-field fxflex="" floatlabel="never" appearance="standard" class="mat-form-field message-text ng-tns-c111-41 mat-primary mat-form-field-type-mat-input mat-form-field-appearance-standard mat-form-field-can-float ng-pristine ng-valid ng-touched" style="flex: 1 1 0%; box-sizing: border-box;">
+                <div class="mat-form-field-wrapper ng-tns-c111-41">
+                  <div class="mat-form-field-flex ng-tns-c111-41">
+                    <!----><!---->
+                    <div class="mat-form-field-infix ng-tns-c111-41">
+                      <textarea rows="1" matinput="" placeholder="Type your message" ngmodel="" name="message" class="mat-input-element mat-form-field-autofill-control cdk-textarea-autosize mat-autosize ng-tns-c111-41 ng-pristine ng-valid cdk-text-field-autofill-monitored ng-touched" id="mat-input-1" data-placeholder="Type your message" aria-invalid="false" aria-required="false" style="height: 18px;"></textarea>
+                      <span class="mat-form-field-label-wrapper ng-tns-c111-41">
+                        <!---->
+                     </span>
+                    </div>
+                    <!---->
+                  </div>
+                  <div class="mat-form-field-underline ng-tns-c111-41 ng-star-inserted"><span class="mat-form-field-ripple ng-tns-c111-41"></span></div>
+                  <!---->
+                  <div class="mat-form-field-subscript-wrapper ng-tns-c111-41">
+                    <!---->
+                    <div class="mat-form-field-hint-wrapper ng-tns-c111-41 ng-trigger ng-trigger-transitionMessages ng-star-inserted" style="opacity: 1; transform: translateY(0%);">
+                      <!---->
+                      <div class="mat-form-field-hint-spacer ng-tns-c111-41"></div>
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </mat-form-field>
+              <button mat-icon-button="" type="submit" aria-label="Send message" class="mat-focus-indicator send-message-button mat-icon-button mat-button-base">
+            <span class="mat-button-wrapper">
+               <mat-icon role="img" class="mat-icon notranslate secondary-text material-icons mat-icon-no-color" aria-hidden="true">send</mat-icon>
+            </span>
+                <div matripple="" class="mat-ripple mat-button-ripple mat-button-ripple-round"></div>
+                <div class="mat-button-focus-overlay"></div>
+              </button>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <div class="screen-footer">
+    <div class="screen-footer-1">
+      <mat-icon class="screen-icon-white">more_horiz</mat-icon>
+    </div>
+    <div class="screen-footer-2">
+      <mat-icon class="screen-icon-white">favorite_border</mat-icon>
+    </div>
+    <div class="screen-footer-3">
+      <mat-icon class="screen-icon-green">view_module</mat-icon>
+    </div>
+  </div>
+</div>
+
+<!-- filters -->
+<div class="screen-dialog" *ngIf="dialog">
+  <div class="screen-dialog-close" (click)="toggle()">
+    <mat-icon class="screen-icon-black">close</mat-icon>
+  </div>
+  <mat-icon class="screen-icon-green filter-icon">filter_list</mat-icon>
+  <span class="filter-title">FILTRAR POR</span>
+  <span class="filter-label">Estado</span>
+  <input class="filter-input" type="text" />
+  <span class="filter-label">Ciudad</span>
+  <input class="filter-input" type="text" />
+  <div class="filter-subtitle">
+    <span>Calificación de usuarios</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <button mat-raised-button class="screen-filter-button" (click)="toggle()">
+    Filtrar
+  </button>
+</div>
+
+<!-- calendar -->
+<div class="screen-dialog2" *ngIf="dialog2">
+  <div class="screen-dialog-close" (click)="toggle2()">
+    <mat-icon class="screen-icon-black">close</mat-icon>
+  </div>
+  <div>
+    <span class="screen-date">19-03-2020</span>
+    <br />
+    <span>Tu próxima consulta</span>
+  </div>
+  <form>
+    <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Estado</mat-label>
+      <input matInput [matDatepicker]="picker" autocomplete="off" />
+      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </form>
+  <div class="screen-dialog-button">
+    <button mat-raised-button class="screen-reject-button" (click)="toggle2()">
+      Rechazar
+    </button>
+    <button mat-raised-button class="screen-acept-button" (click)="toggle2()">
+      Acceptar
+    </button>
+  </div>
+</div>
+
+

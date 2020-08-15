@@ -1,0 +1,90 @@
+<div class="screen-container">
+  <div class="screen-header">
+    <div class="screen-header-options">
+      <div class="screen-active-route">
+        <img
+          class="screen-img"
+          style="margin: 0 0 6px 2px;"
+          src="../../../assets/icons/personactive.png"
+          alt="screen-img"
+        />
+      </div>
+    </div>
+    <div class="screen-header-options">
+      <div class="screen-route">
+        <img
+          class="screen-img"
+          style="margin: 0 2px 0 0;"
+          src="../../../assets/icons/pagoinactive.png"
+          alt="screen-img"
+        />
+      </div>
+    </div>
+  </div>
+  <form class="screen-form">
+    <div class="screen-content-box">
+      <div class="screen-scroll">
+        <div class="screen-image-cont">
+          <img
+            [src]="fileSelected || defaultImage"
+            alt="default"
+            class="screen-image"
+          />
+        </div>
+        <span class="screen-text">@Javier Ramo</span>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Tu nombre de usuario</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            phone
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Genero</mat-label>
+          <mat-select>
+            <mat-option *ngFor="let genero of gender" [value]="genero">
+              {{ genero }}
+            </mat-option>
+          </mat-select>
+          <mat-icon class="screen-icon-grey" matPrefix>
+            reply
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Fecha de nacimiento</mat-label>
+          <input matInput [matDatepicker]="picker" autocomplete="off" />
+          <mat-datepicker-toggle
+            matPrefix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Whatsapp</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            phone
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Correo electrónico</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            alternate_email
+          </mat-icon>
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Domicilio</mat-label>
+          <input matInput autocomplete="off" />
+          <mat-icon class="screen-icon-grey" matPrefix>
+            place
+          </mat-icon>
+        </mat-form-field>
+        <button mat-raised-button class="screen-save-button" routerLink="/datos-pago">
+          Guardar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+

@@ -1,0 +1,84 @@
+<div class="screen-container">
+  <div class="screen-header">
+    <div class="screen-header-options">
+      <div class="screen-active-route">
+        <img
+          class="screen-img"
+          style="margin: 0 0 6px 2px;"
+          src="../../../assets/icons/personinactive.png"
+          alt="screen-img"
+        />
+      </div>
+    </div>
+    <div class="screen-header-options">
+      <div class="screen-route">
+        <img
+          class="screen-img"
+          style="margin: 0 2px 0 0;"
+          src="../../../assets/icons/pagoactive.png"
+          alt="screen-img"
+        />
+      </div>
+    </div>
+  </div>
+  <form class="screen-form">
+    <div class="screen-content-box">
+      <div class="screen-scroll">
+        <span class="screen-text-green">DATOS DE PAGO</span>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Nombre que aparece en la tarjeta</mat-label>
+          <input matInput autocomplete="off" />
+        </mat-form-field>
+        <mat-form-field appearance="outline" floatLabel="always">
+          <mat-label>Numero de tarjeta</mat-label>
+          <input matInput autocomplete="off" />
+        </mat-form-field>
+        <span class="screen-text">Fecha De Expiracion</span>
+        <div>
+          <mat-form-field appearance="outline" floatLabel="always">
+            <mat-label>Mes</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let month of months" [value]="month">
+                {{ month }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field appearance="outline" floatLabel="always" >
+            <mat-label>Año</mat-label>
+            <mat-select>
+              <mat-option *ngFor="let year of years" [value]="year">
+                {{ year }}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="screen-info-img">
+          <img
+            class="screen-info-img"
+            src="../../../assets/images/visa.png"
+          />
+          <img
+            class="screen-info-img"
+            src="../../../assets/images/mastercard.png"
+          />
+        </div>
+        <div class="screen-info-expire">
+          <mat-form-field appearance="outline" floatLabel="always" >
+            <mat-label>CVV (últimos 3 digitos al reverso de tu tarjeta)</mat-label>
+            <input matInput autocomplete="off" />
+          </mat-form-field>
+        </div>
+        <div>
+          <section class="example-section">
+            <mat-checkbox class="example-margin">Guardar tarjeta para futuras compras</mat-checkbox>
+          </section>
+        </div>
+        <button mat-raised-button class="screen-save-button" routerLink="/inicio">
+          Guardar
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+

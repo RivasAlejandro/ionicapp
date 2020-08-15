@@ -1,0 +1,130 @@
+<div class="screen-container">
+  <div class="screen-header">
+    <div class="screen-route" routerLink="/directorio">
+      <mat-icon class="screen-icon-grey">contacts</mat-icon>
+    </div>
+    <div class="screen-route" routerLink="/contacto">
+      <mat-icon class="screen-icon-grey">send</mat-icon>
+    </div>
+    <div class="screen-active-route">
+      <mat-icon class="screen-icon-green">description</mat-icon>
+    </div>
+  </div>
+
+  <div class="screen-content">
+    <div class="screen-content-box">
+      <div class="screen-scroll">
+        <img
+          class="screen-card-image"
+          src="../../../assets/images/wellogi.png"/>
+        <span class="screen-title">Tu información es muy importante para</span>
+        <span class="screen-title">WELLOGI por lo que todos tus datos</span>
+        <span class="screen-title">se almacenan de forma segura</span>
+        <span class="screen-title">en todo momento.</span>
+        <br>
+        <span class="screen-title">Para utilizar tu plataforma WELLOGI</span>
+        <span class="screen-title">y puedas interactuar con todas las opciones</span>
+        <span class="screen-title">de profesionales para el cuidado de tu</span>
+        <span class="screen-title">salud, asi como ellos puedan interactuar con</span>
+        <span class="screen-title">tu historial médico dentro de la aplicacion, WELLOGI</span>
+        <span class="screen-title">es gratuita, esto siempre y cuando exista interaccón</span>
+        <span class="screen-title">en ella y se le de seguimiento a tus consultas.</span>
+        <br>
+        <span class="screen-title">Si dejas de interactar con ella durante</span>
+        <span class="screen-title">un mes después de haber consultado a un</span>
+        <span class="screen-title">profesional y no tienes seguimiento, la</span>
+        <span class="screen-title">plataforma generara un costo de:</span>
+        <br>
+        <div class="screen-subtitle">
+          <span class="screen-subtitle-text">$50.00 MXN</span>
+        </div>
+        <span class="screen-title">Mensuales</span>
+        <br>
+        <span class="screen-title">Que se cargarán automaticamente a la referencia</span>
+        <span class="screen-title">bancaria que esta ligada a tu cuenta WELLOGI</span>
+        <br>
+        <span class="screen-title">El servicio puedes darlo de baja en cualquier</span>
+        <span class="screen-title">momento, pero tu información sensible</span>
+        <span class="screen-title">generada en la plataforma solo podrá</span>
+        <span class="screen-title">se consultada en ella, si deseas recontratar</span>
+        <span class="screen-title">el servicio una vez que lo diste de bajar y</span>
+        <span class="screen-title">quiere recuperar tu información el costo es de:</span>
+      </div>
+    </div>
+  </div>
+  <div class="screen-footer">
+    <div class="screen-footer-1">
+      <mat-icon class="screen-icon-white">more_horiz</mat-icon>
+    </div>
+    <div class="screen-footer-2">
+      <mat-icon class="screen-icon-white">favorite_border</mat-icon>
+    </div>
+    <div class="screen-footer-3">
+      <mat-icon class="screen-icon-green">view_module</mat-icon>
+    </div>
+  </div>
+</div>
+
+<!-- filters -->
+<div class="screen-dialog" *ngIf="dialog">
+  <div class="screen-dialog-close" (click)="toggle()">
+    <mat-icon class="screen-icon-black">close</mat-icon>
+  </div>
+  <mat-icon class="screen-icon-green filter-icon">filter_list</mat-icon>
+  <span class="filter-title">FILTRAR POR</span>
+  <span class="filter-label">Estado</span>
+  <input class="filter-input" type="text" />
+  <span class="filter-label">Ciudad</span>
+  <input class="filter-input" type="text" />
+  <div class="filter-subtitle">
+    <span>Calificación de usuarios</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <button mat-raised-button class="screen-filter-button" (click)="toggle()">
+    Filtrar
+  </button>
+</div>
+
+<!-- calendar -->
+<div class="screen-dialog2" *ngIf="dialog2">
+  <div class="screen-dialog-close" (click)="toggle2()">
+    <mat-icon class="screen-icon-black">close</mat-icon>
+  </div>
+  <div>
+    <span class="screen-date">19-03-2020</span>
+    <br />
+    <span>Tu próxima consulta</span>
+  </div>
+  <form>
+    <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Estado</mat-label>
+      <input matInput [matDatepicker]="picker" autocomplete="off" />
+      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </form>
+  <div class="screen-dialog-button">
+    <button mat-raised-button class="screen-reject-button" (click)="toggle2()">
+      Rechazar
+    </button>
+    <button mat-raised-button class="screen-acept-button" (click)="toggle2()">
+      Acceptar
+    </button>
+  </div>
+</div>
+

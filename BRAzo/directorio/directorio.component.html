@@ -1,0 +1,110 @@
+<div class="screen-container">
+  <div class="screen-header">
+    <div class="screen-active-route">
+      <mat-icon class="screen-icon-green">contacts</mat-icon>
+    </div>
+    <div class="screen-route" routerLink="/contacto">
+      <mat-icon class="screen-icon-grey">send</mat-icon>
+    </div>
+    <div class="screen-route" routerLink="/pago-mensual">
+      <mat-icon class="screen-icon-grey">description</mat-icon>
+    </div>
+  </div>
+  <div class="screen-subtitle">
+    <span class="screen-subtitle-text">DIRECTORIO</span>
+    <mat-icon class="screen-icon-blue" (click)="toggle()">filter_list</mat-icon>
+  </div>
+  <div class="screen-content">
+    <div class="screen-content-box">
+      <div class="screen-scroll" routerLink="/cuestionario">
+        <div class="screen-card" *ngFor="let item of [1, 2, 3, 4, 5, 6]">
+          <div class="screen-card-column">
+            <span>Ahora en contacto con</span>
+            <span>@carloshernadez</span>
+            <div class="screen-card-star">
+              <app-start-rating></app-start-rating>
+            </div>
+          </div>
+          <img
+            class="screen-card-image"
+            src="https://www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="screen-footer">
+    <div class="screen-footer-1">
+      <mat-icon class="screen-icon-white">more_horiz</mat-icon>
+    </div>
+    <div class="screen-footer-2">
+      <mat-icon class="screen-icon-white">favorite_border</mat-icon>
+    </div>
+    <div class="screen-footer-3">
+      <mat-icon class="screen-icon-green">view_module</mat-icon>
+    </div>
+  </div>
+</div>
+
+<!-- filters -->
+<div class="screen-dialog" *ngIf="dialog">
+  <div class="screen-dialog-close" (click)="toggle()">
+    <mat-icon class="screen-icon-black">close</mat-icon>
+  </div>
+  <mat-icon class="screen-icon-green filter-icon">filter_list</mat-icon>
+  <span class="filter-title">FILTRAR POR</span>
+  <span class="filter-label">Estado</span>
+  <input class="filter-input" type="text" />
+  <span class="filter-label">Ciudad</span>
+  <input class="filter-input" type="text" />
+  <div class="filter-subtitle">
+    <span>Calificación de usuarios</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <div class="screen-start-content">
+    <app-start-rating size="30px" marginLeft="8px"></app-start-rating>
+    <span>o más</span>
+  </div>
+  <button mat-raised-button class="screen-filter-button" (click)="toggle()">
+    Filtrar
+  </button>
+</div>
+
+<!-- calendar -->
+<div class="screen-dialog2" *ngIf="dialog2">
+  <div class="screen-dialog-close" (click)="toggle2()">
+    <mat-icon class="screen-icon-black">close</mat-icon>
+  </div>
+  <div>
+    <span class="screen-date">19-03-2020</span>
+    <br />
+    <span>Tu próxima consulta</span>
+  </div>
+  <form>
+    <mat-form-field appearance="fill" floatLabel="always">
+      <mat-label>Estado</mat-label>
+      <input matInput [matDatepicker]="picker" autocomplete="off" />
+      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </form>
+  <div class="screen-dialog-button">
+    <button mat-raised-button class="screen-reject-button" (click)="toggle2()">
+      Rechazar
+    </button>
+    <button mat-raised-button class="screen-acept-button" (click)="toggle2()">
+      Acceptar
+    </button>
+  </div>
+</div>

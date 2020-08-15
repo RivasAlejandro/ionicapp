@@ -1,0 +1,12 @@
+.start-raiting {
+  display: flex;
+  align-items: center;
+}
+
+.screen-icon-yellow {
+  color: #eac212 !important;
+}
+
+.screen-icon-default {
+  color: #dee7ec;
+}

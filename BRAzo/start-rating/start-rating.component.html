@@ -1,0 +1,10 @@
+<div class="start-raiting">
+  <mat-icon
+    *ngFor="let item of [1, 2, 3, 4, 5]"
+    [ngClass]="{ 'screen-icon-yellow': item <= rating }"
+    class="screen-icon-default"
+    [ngStyle]="{ 'font-size': size, 'margin-left': marginLeft }"
+  >
+    star
+  </mat-icon>
+</div>
