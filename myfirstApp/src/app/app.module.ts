@@ -13,6 +13,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import {ValidatorService} from '../app/validator.service';
 import { RouterModule } from "@angular/router";
 import { HomePage } from './home/home.page';
+import { MatExpansionModule } from '@angular/material/expansion';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -24,6 +25,7 @@ import { HomePage } from './home/home.page';
      IonicModule.forRoot(), 
     AppRoutingModule, 
     BrowserAnimationsModule,
+    MatExpansionModule 
   
   
   ],
